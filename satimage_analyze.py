@@ -36,7 +36,7 @@ ax1b.plot(rr, data['y'])
 ax1b.set_title("y (output data)");
                     
 plt.show()
-plt.savefig('Fig1.png')
+plt.savefig('fullDataSet_mesh.png')
 
 
 #%% Anaylze the input data by pandas_profiling
@@ -63,29 +63,3 @@ axs[1].set_title('Violin of Input Matrix, X')
 plt.tight_layout(pad=2, h_pad=3)
 plt.show()
 plt.savefig('Fig2.png')
-
-    
-
-#%% Plot a few inliners and outliners
-id_inliner = np.where(y==0)
-id_outliner = np.where(y==1)
-
-# fig3 = plt.figure()
-# for i in range(10):
-#     plt.plot(X[id_inliner[0][i], :], label='Row'+str(id_inliner[0][i]))
-
-# plt.legend(loc='upper right')
-# plt.title('Arbitrary Samples of Inliners')
-# plt.show()
-# plt.savefig('Fig3.png')
-
-#----------
-fig4 = plt.figure()
-for i in range(3):
-    plt.plot(X[id_outliner[0][i], :], label='Row'+str(id_inliner[0][i]))
-    plt.show()
-
-plt.legend(loc='upper right')
-plt.title('Arbitrary Samples of Outliners')
-plt.show()
-plt.savefig('Fig4.png')

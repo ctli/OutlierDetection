@@ -86,15 +86,11 @@ ylim([20 160]);
 xlim([0 37]);
 
 %id_take = id_outliner(53);
-
 %id_take = id_outliner(4);
 %id_take = id_outliner(38);
-% id_take = id_outliner(18);
-% id_take = id_outliner(46);
+%id_take = id_outliner(18);
+%id_take = id_outliner(46);
 id_take = id_outliner(67);
-
-
-
 h2 = plot(X(id_take,:), 'ko-', 'markersize', 3, 'markerfacecolor', 'k');
 
 legend([h1, h2], 'Median', ['Sample #', num2str(id_outliner(1))]);
